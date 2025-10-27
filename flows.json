@@ -1,0 +1,1081 @@
+[
+    {
+        "id": "ef00fc1876151df8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c75968ba071e0993",
+        "type": "mqtt-broker",
+        "z": "ef00fc1876151df8",
+        "name": "",
+        "broker": "e55a7426310c457a85053f429ac5f440.s1.eu.hivemq.cloud",
+        "port": "8883",
+        "tls": "",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "16247bf8bee0998a",
+        "type": "ui_tab",
+        "name": "Hệ thống IoT giám sát cháy rừng ứng dụng LoRa",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "36851a5a42bea88d",
+        "type": "ui_group",
+        "name": "Độ ẩm",
+        "tab": "16247bf8bee0998a",
+        "order": 1,
+        "disp": true,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4f7e8cd853a01daa",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "d7302a780bbcc85e",
+        "type": "ui_group",
+        "name": "Nhiệt độ",
+        "tab": "16247bf8bee0998a",
+        "order": 2,
+        "disp": true,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "faeeead80fc527a9",
+        "type": "ui_group",
+        "name": "Nồng độ CO",
+        "tab": "16247bf8bee0998a",
+        "order": 3,
+        "disp": true,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "dfb912259722391c",
+        "type": "ui_group",
+        "name": "Báo cháy ( AI camera )",
+        "tab": "16247bf8bee0998a",
+        "order": 5,
+        "disp": true,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "439ce5a63f29dc37",
+        "type": "ui_group",
+        "name": "Thời gian",
+        "tab": "16247bf8bee0998a",
+        "order": 4,
+        "disp": true,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a7bac4c4955bd6f3",
+        "type": "ui_tab",
+        "name": "Thống kê dữ liệu",
+        "icon": "fa-window-maximize",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f49745b04ed26734",
+        "type": "ui_group",
+        "name": "Bảng thống kê dữ dữ liệu 2 tháng gần nhất",
+        "tab": "a7bac4c4955bd6f3",
+        "order": 1,
+        "disp": true,
+        "width": "22",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "83cfe6b3d16a164b",
+        "type": "ui_tab",
+        "name": "Điều khiển thiết bị",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "e9c45a6e67531fce",
+        "type": "ui_group",
+        "name": "Led gateway",
+        "tab": "83cfe6b3d16a164b",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f161d7b3090ddf36",
+        "type": "ui_group",
+        "name": "Led node IoT",
+        "tab": "83cfe6b3d16a164b",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "58a46025317796d8",
+        "type": "ui_group",
+        "name": "Led cam",
+        "tab": "83cfe6b3d16a164b",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "256d8612427ae6a3",
+        "type": "mqtt in",
+        "z": "ef00fc1876151df8",
+        "name": "",
+        "topic": "rev/data",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "c75968ba071e0993",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 160,
+        "wires": [
+            [
+                "613476d7a34aadcb"
+            ]
+        ]
+    },
+    {
+        "id": "613476d7a34aadcb",
+        "type": "json",
+        "z": "ef00fc1876151df8",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 290,
+        "y": 160,
+        "wires": [
+            [
+                "87a4d87a14138bf5",
+                "dc72f38b1965a747",
+                "1a1e4325b52b8192",
+                "c713ab76bb3565b3",
+                "b8dcd80c5a5dfb9b",
+                "b5768444b78dbc6b",
+                "135ddf9d55688aab"
+            ]
+        ]
+    },
+    {
+        "id": "c713ab76bb3565b3",
+        "type": "function",
+        "z": "ef00fc1876151df8",
+        "name": "Tình trạng CO",
+        "func": "let x=Number(msg.payload.CO);\nif(x<=9){\n    msg.payload=\"Nồng độ CO an toàn\";\n}\nelse if(x>9&&x<=30){\n    msg.payload=\"Cảnh báo! CO cao \";\n}\nelse{\n    msg.payload=\"Nguy hiểm! CO rất cao\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 200,
+        "wires": [
+            [
+                "0ec24b07d3bb1738"
+            ]
+        ]
+    },
+    {
+        "id": "0ec24b07d3bb1738",
+        "type": "ui_text",
+        "z": "ef00fc1876151df8",
+        "group": "faeeead80fc527a9",
+        "order": 2,
+        "width": 7,
+        "height": 2,
+        "name": "",
+        "label": "Tình trạng:",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 990,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "87a4d87a14138bf5",
+        "type": "ui_gauge",
+        "z": "ef00fc1876151df8",
+        "name": "",
+        "group": "36851a5a42bea88d",
+        "order": 1,
+        "width": 7,
+        "height": 5,
+        "gtype": "gage",
+        "title": "ĐỘ ẨM",
+        "label": "%",
+        "format": "{{msg.payload.humidity}}",
+        "min": 0,
+        "max": "150",
+        "colors": [
+            "#00ff00",
+            "#00ff1e",
+            "#04ff00"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 680,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "dc72f38b1965a747",
+        "type": "ui_gauge",
+        "z": "ef00fc1876151df8",
+        "name": "",
+        "group": "d7302a780bbcc85e",
+        "order": 1,
+        "width": 7,
+        "height": 5,
+        "gtype": "gage",
+        "title": "NHIỆT ĐỘ",
+        "label": "C",
+        "format": "{{msg.payload.temperature}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 690,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "1a1e4325b52b8192",
+        "type": "ui_gauge",
+        "z": "ef00fc1876151df8",
+        "name": "",
+        "group": "faeeead80fc527a9",
+        "order": 1,
+        "width": 7,
+        "height": 5,
+        "gtype": "gage",
+        "title": "NỒNG ĐỘ CO",
+        "label": "ppm",
+        "format": "{{msg.payload.CO}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "10",
+        "seg2": "30",
+        "diff": false,
+        "className": "",
+        "x": 700,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "d3d1497e1eccbccd",
+        "type": "ui_template",
+        "z": "ef00fc1876151df8",
+        "group": "",
+        "name": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    ui-card-panel {\n    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;\n    border-radius: 8px;\n    }\n    .nr-dashboard-cardtitle {\n    font-weight: bold !important;\n    }\n    .md-button{\n    border-radius: 5px;\n    }\n    .nr-dashboard-toolbar {\n    position: relative;\n    background-color: #f5f5f5; /* màu nền thanh toolbar */\n    }\n    md-toolbar {\n    position: relative;\n    padding-right: 60px !important; /* đẩy nội dung sang trái để không bị che */\n    height: 60px; /* chiều cao toolbar */\n    }\n    \n    md-toolbar::before {\n    content: \"\";\n    position: absolute;\n    right: 10px; /* khoảng cách từ mép phải */\n    top: 50%;\n    transform: translateY(-50%);\n    width: 55px; /* chiều rộng logo */\n    height: 55px; /* chiều cao logo */\n    background:\n    url(\"https://raw.githubusercontent.com/DinhHieu2201/public_pic/refs/heads/main/logo-dai-hoc-thuy-loi-inkythuatso-converted-01-23-08-45-05.jpg\")\n    no-repeat center center;\n    background-size: contain;\n    z-index: 10;\n    }\n\n    body {\n    background:\n    url(\"https://raw.githubusercontent.com/DinhHieu2201/public_pic/main/2f18735a-84a3-4407-b061-d37948f5fa91.png\")\n    no-repeat center center fixed;\n    background-size: cover;\n    }\n<style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "global",
+        "className": "",
+        "x": 120,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "88335c7a5e00686e",
+        "type": "ui_text",
+        "z": "ef00fc1876151df8",
+        "group": "dfb912259722391c",
+        "order": 1,
+        "width": 7,
+        "height": 2,
+        "name": "",
+        "label": "Tình trạng: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 990,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "b8dcd80c5a5dfb9b",
+        "type": "function",
+        "z": "ef00fc1876151df8",
+        "name": "Tình trạng báo cháy",
+        "func": "let x = Number(msg.payload.fireState);\nif(x===0){\n    msg.payload=\"An toàn!\";\n}\nelse if(x===1){\n    msg.payload=\"Cảnh báo! Hệ thống AI camera phát hiện có lửa\";\n}\nreturn msg\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 260,
+        "wires": [
+            [
+                "88335c7a5e00686e"
+            ]
+        ]
+    },
+    {
+        "id": "135ddf9d55688aab",
+        "type": "function",
+        "z": "ef00fc1876151df8",
+        "name": "function 3",
+        "func": "let x = Number(msg.payload.fireState);\nif(x===0){\n    return null;\n}\nelse if (x === 1){\n    msg.payload = \"Cảnh báo! Hệ thống AI camera phát hiện có lửa\";\n}\nreturn msg",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 360,
+        "wires": [
+            [
+                "301b3207cd1ce1e9",
+                "56816d932b6b907c",
+                "ebc5c522c5423f1c"
+            ]
+        ]
+    },
+    {
+        "id": "301b3207cd1ce1e9",
+        "type": "e-mail",
+        "z": "ef00fc1876151df8",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "dinhxuanhieu2201@gmail.com",
+        "dname": "",
+        "x": 950,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "56816d932b6b907c",
+        "type": "ui_audio",
+        "z": "ef00fc1876151df8",
+        "name": "",
+        "group": "dfb912259722391c",
+        "voice": "Microsoft HoaiMy Online (Natural) - Vietnamese (Vietnam)",
+        "always": "",
+        "x": 880,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "ebc5c522c5423f1c",
+        "type": "ui_toast",
+        "z": "ef00fc1876151df8",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 910,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "69427799892f71ba",
+        "type": "ui_text",
+        "z": "ef00fc1876151df8",
+        "group": "439ce5a63f29dc37",
+        "order": 1,
+        "width": 7,
+        "height": 2,
+        "name": "",
+        "label": "🕓Ngày/giờ:",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 430,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "bcd0831374e26c63",
+        "type": "inject",
+        "z": "ef00fc1876151df8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 320,
+        "wires": [
+            [
+                "9b75b1f18dffd7fb"
+            ]
+        ]
+    },
+    {
+        "id": "9b75b1f18dffd7fb",
+        "type": "function",
+        "z": "ef00fc1876151df8",
+        "name": "function 4",
+        "func": "var date = new Date(msg.payload);\nmsg.payload = date.toLocaleString(); // hiển thị giờ theo định dạng hệ thống\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 320,
+        "wires": [
+            [
+                "69427799892f71ba"
+            ]
+        ]
+    },
+    {
+        "id": "e881e160ba520981",
+        "type": "csv",
+        "z": "ef00fc1876151df8",
+        "name": "",
+        "spec": "rfc",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "once",
+        "multi": "one",
+        "ret": "\\r\\n",
+        "temp": "time,Humidity,Temperature,CO",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 430,
+        "y": 460,
+        "wires": [
+            [
+                "a79f82402ad41988"
+            ]
+        ]
+    },
+    {
+        "id": "a79f82402ad41988",
+        "type": "file",
+        "z": "ef00fc1876151df8",
+        "name": "file path",
+        "filename": "C:\\Users\\dinhx\\OneDrive\\Desktop\\data3.csv",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "utf8",
+        "x": 560,
+        "y": 460,
+        "wires": [
+            [
+                "ad85b5592dfc6219"
+            ]
+        ]
+    },
+    {
+        "id": "ad85b5592dfc6219",
+        "type": "debug",
+        "z": "ef00fc1876151df8",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "eec10cd9676b2b60",
+        "type": "inject",
+        "z": "ef00fc1876151df8",
+        "name": "Inject",
+        "props": [],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 110,
+        "y": 460,
+        "wires": [
+            [
+                "987eb6e3d28574d7",
+                "e8d855897fa6107e"
+            ]
+        ]
+    },
+    {
+        "id": "987eb6e3d28574d7",
+        "type": "function",
+        "z": "ef00fc1876151df8",
+        "name": "CSV data",
+        "func": "var Humidity = global.get(\"LastHumidity\");\nvar Temperature = global.get(\"LastTemperature\");\nvar CO = global.get(\"LastCO\")\nvar time = new Date().toLocaleString();\nvar row = { time: time, Humidity: Humidity+\" %\", Temperature: Temperature+\" C\",CO: CO+\" ppm\" };\nreturn { payload: row };",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 460,
+        "wires": [
+            [
+                "e881e160ba520981"
+            ]
+        ]
+    },
+    {
+        "id": "e8d855897fa6107e",
+        "type": "function",
+        "z": "ef00fc1876151df8",
+        "name": "Table data",
+        "func": "\nlet Temperature = global.get(\"LastTemperature\") || null; if (Temperature === null) return null;\nlet Humidity = global.get(\"LastHumidity\") || null; if (Humidity === null) return null;\nlet CO = global.get(\"LastCO\") || null; if (CO === null) return null;\n\nlet time = new Date().toLocaleString(); \n\nlet row = { time: time, Humidity: Humidity + \" %\", Temperature: Temperature + \" C\", CO: CO + \" ppm\" }; \nlet data = global.get(\"tableData2\") || [];\ndata.unshift(row); \n//set so dong toi da\nif (data.length > 60) data.pop(); \n\nglobal.set(\"tableData2\", data); \n\nmsg.payload = { command: \"replaceData\", arguments: [data] }; return msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 540,
+        "wires": [
+            [
+                "0bb61f72a9ea755b",
+                "d67c026e3b6d7e75"
+            ]
+        ]
+    },
+    {
+        "id": "b257c0438ff7a11d",
+        "type": "comment",
+        "z": "ef00fc1876151df8",
+        "name": "Lưu vào file csv",
+        "info": "",
+        "x": 880,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "0bb61f72a9ea755b",
+        "type": "debug",
+        "z": "ef00fc1876151df8",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "d67c026e3b6d7e75",
+        "type": "ui_table",
+        "z": "ef00fc1876151df8",
+        "group": "f49745b04ed26734",
+        "name": "",
+        "order": 1,
+        "width": "22",
+        "height": "12",
+        "columns": [
+            {
+                "field": "time",
+                "title": "Date",
+                "width": "40%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "Humidity",
+                "title": "Hum",
+                "width": "20%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "Temperature",
+                "title": "Temp",
+                "width": "20%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "CO",
+                "title": "CO",
+                "width": "20%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 570,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "2417f49cdb86a725",
+        "type": "comment",
+        "z": "ef00fc1876151df8",
+        "name": "Hiển thị lên bảng và lưu dữ liệu",
+        "info": "",
+        "x": 790,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "b5768444b78dbc6b",
+        "type": "function",
+        "z": "ef00fc1876151df8",
+        "name": "Lưu data",
+        "func": "msg.payload.temperature = Number(msg.payload.temperature);\nglobal.set(\"LastTemperature\", msg.payload.temperature, \"file\");\n\nmsg.payload.humidity = Number(msg.payload.humidity);\nglobal.set(\"LastHumidity\", msg.payload.humidity, \"file\");\n\nmsg.payload.CO = Number(msg.payload.CO);\nglobal.set(\"LastCO\", msg.payload.CO, \"file\");\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "407eda478658f92c",
+        "type": "ui_switch",
+        "z": "ef00fc1876151df8",
+        "name": "",
+        "label": "Gate",
+        "tooltip": "",
+        "group": "e9c45a6e67531fce",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "1on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "1off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 150,
+        "y": 680,
+        "wires": [
+            [
+                "c91bb2c738f8f258",
+                "1f1638bac1940ef4"
+            ]
+        ]
+    },
+    {
+        "id": "c7a0c3eebb846fbd",
+        "type": "ui_switch",
+        "z": "ef00fc1876151df8",
+        "name": "",
+        "label": "Node",
+        "tooltip": "",
+        "group": "f161d7b3090ddf36",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "2on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "2off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 150,
+        "y": 780,
+        "wires": [
+            [
+                "c726761b70118b3a",
+                "1f1638bac1940ef4"
+            ]
+        ]
+    },
+    {
+        "id": "c91bb2c738f8f258",
+        "type": "ui_led",
+        "z": "ef00fc1876151df8",
+        "order": 1,
+        "group": "e9c45a6e67531fce",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "1off",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "1on",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 150,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "c726761b70118b3a",
+        "type": "ui_led",
+        "z": "ef00fc1876151df8",
+        "order": 1,
+        "group": "f161d7b3090ddf36",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "2off",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "2on",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 150,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "1f1638bac1940ef4",
+        "type": "mqtt out",
+        "z": "ef00fc1876151df8",
+        "name": "",
+        "topic": "rev/led",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "c75968ba071e0993",
+        "x": 450,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "9380bb7adbeb2795",
+        "type": "ui_switch",
+        "z": "ef00fc1876151df8",
+        "name": "",
+        "label": "switch",
+        "tooltip": "",
+        "group": "58a46025317796d8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "3on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "3off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 150,
+        "y": 880,
+        "wires": [
+            [
+                "c6544280c8a82a2b",
+                "1f1638bac1940ef4"
+            ]
+        ]
+    },
+    {
+        "id": "c6544280c8a82a2b",
+        "type": "ui_led",
+        "z": "ef00fc1876151df8",
+        "order": 1,
+        "group": "58a46025317796d8",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "3off",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "3on",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 150,
+        "y": 840,
+        "wires": []
+    }
+]

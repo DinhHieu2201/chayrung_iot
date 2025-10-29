@@ -248,6 +248,7 @@ void reconnect()
     if (client.connect("ESP32Client", mqtt_username, mqtt_password))
     {
       Serial.println("thành công!");
+      client.subscribe("rev/led");
     }
     else
     {
@@ -256,7 +257,6 @@ void reconnect()
       Serial.println(" thử lại sau 5s");
       delay(5000);
     }
-    client.subscribe("rev/led");
   }
 }
 
